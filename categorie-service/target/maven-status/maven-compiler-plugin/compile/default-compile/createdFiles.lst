@@ -1,0 +1,10 @@
+fr\esgi\categorie_service\service\CategorieService.class
+fr\esgi\categorie_service\business\Categorie.class
+fr\esgi\categorie_service\dto\CategorieDto.class
+fr\esgi\categorie_service\mapper\CategorieMapper.class
+fr\esgi\categorie_service\mapper\CategorieMapperImpl.class
+fr\esgi\categorie_service\repository\CategorieRepository.class
+fr\esgi\categorie_service\initialisation\AjoutDonneesInitiales.class
+fr\esgi\categorie_service\controller\rest\CategorieRestController.class
+fr\esgi\categorie_service\service\impl\CategorieServiceImpl.class
+fr\esgi\categorie_service\CategorieServiceApplication.class

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>fr.esgi</groupId>
+    <artifactId>microservices</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>microservices</name>
+    <description>Agrégateur de tous les microservices</description>
+
+    <modules>
+        <module>service-registry</module>
+        <module>admin-server</module>
+        <module>utilisateur-service</module>
+        <module>sujet-service</module>
+        <module>categorie-service</module>
+        <module>colonne-service</module>
+        <module>tier-liste-service</module>
+    </modules>
+</project>

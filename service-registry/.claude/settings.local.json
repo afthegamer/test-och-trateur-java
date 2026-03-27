@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r \"C:/Users/ADMIN/Downloads/java/service-registry\" \"C:/Users/ADMIN/Downloads/java/microservices/service-registry\")",
+      "Bash(cp -r \"C:/Users/ADMIN/Downloads/java/tier_liste2026032502/tier_liste\" \"C:/Users/ADMIN/Downloads/java/microservices/tier-liste\")"
+    ]
+  }
+}

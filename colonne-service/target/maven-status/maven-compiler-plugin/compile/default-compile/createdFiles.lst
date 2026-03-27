@@ -1,0 +1,9 @@
+fr\esgi\colonne_service\dto\ColonneDto.class
+fr\esgi\colonne_service\service\ColonneService.class
+fr\esgi\colonne_service\service\impl\ColonneServiceImpl.class
+fr\esgi\colonne_service\mapper\ColonneMapperImpl.class
+fr\esgi\colonne_service\repository\ColonneRepository.class
+fr\esgi\colonne_service\business\Colonne.class
+fr\esgi\colonne_service\ColonneServiceApplication.class
+fr\esgi\colonne_service\controller\rest\ColonneRestController.class
+fr\esgi\colonne_service\mapper\ColonneMapper.class
