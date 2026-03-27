@@ -1,9 +1,0 @@
-fr\esgi\tier_liste_service\TierListeServiceApplication.class
-fr\esgi\tier_liste_service\controller\rest\TierListeRestController.class
-fr\esgi\tier_liste_service\service\TierListeService.class
-fr\esgi\tier_liste_service\dto\TierListeDto.class
-fr\esgi\tier_liste_service\repository\TierListeRepository.class
-fr\esgi\tier_liste_service\mapper\TierListeMapper.class
-fr\esgi\tier_liste_service\mapper\TierListeMapperImpl.class
-fr\esgi\tier_liste_service\service\impl\TierListeServiceImpl.class
-fr\esgi\tier_liste_service\business\TierListe.class
