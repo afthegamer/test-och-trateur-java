@@ -1,6 +1,8 @@
 package fr.esgi.tier_liste_service.service.impl;
 
 import fr.esgi.tier_liste_service.dto.TierListeDto;
+import fr.esgi.tier_liste_service.feign.SujetFeign;
+import fr.esgi.tier_liste_service.feign.UtilisateurFeign;
 import fr.esgi.tier_liste_service.mapper.TierListeMapper;
 import fr.esgi.tier_liste_service.repository.TierListeRepository;
 import fr.esgi.tier_liste_service.service.TierListeService;
@@ -15,6 +17,8 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class TierListeServiceImpl implements TierListeService {
 
+    private final UtilisateurFeign utilisateurFeign;
+    private final SujetFeign sujetFeign;
     private final TierListeRepository tierListeRepository;
     private final TierListeMapper tierListeMapper;
 

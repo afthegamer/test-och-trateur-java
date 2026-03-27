@@ -3,6 +3,8 @@ package fr.esgi.utilisateur_service.controller.rest;
 import fr.esgi.utilisateur_service.dto.UtilisateurDto;
 import fr.esgi.utilisateur_service.mapper.UtilisateurMapper;
 import fr.esgi.utilisateur_service.service.UtilisateurService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,6 +22,7 @@ public class UtilisateurRestController {
     private final UtilisateurMapper utilisateurMapper;
 
     @GetMapping
+    @Operation(summary = "Récupère tous les utilisateurs")
     public ResponseEntity<List<UtilisateurDto>> getAll() {
         return ResponseEntity.ok(utilisateurService.recupererTous()
                 .stream()
@@ -28,7 +31,8 @@ public class UtilisateurRestController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UtilisateurDto> getById(@PathVariable Long id) {
+    @Operation(summary = "Récupère l'utilisateur par son id")
+    public ResponseEntity<UtilisateurDto> getById(@Parameter(description = "id de l'utilisateur") @PathVariable Long id) {
         return utilisateurService.recupererParId(id)
                 .map(utilisateurMapper::toDto)
                 .map(ResponseEntity::ok)
@@ -36,11 +40,13 @@ public class UtilisateurRestController {
     }
 
     @GetMapping("/count")
+    @Operation(summary = "Compter le nombre total d'utilisateurs")
     public ResponseEntity<Long> count() {
         return ResponseEntity.ok(utilisateurService.compterUtilisateurs());
     }
 
     @GetMapping("/anniversaire")
+    @Operation(summary = "Récupérer les utilisateurs qui célèbrent leur anniversaire aujourd'hui")
     public ResponseEntity<List<UtilisateurDto>> getAnniversaire() {
         return ResponseEntity.ok(utilisateurService.recupererUtilisateursCelebrantLeurAnniversaire()
                 .stream()
@@ -49,6 +55,7 @@ public class UtilisateurRestController {
     }
 
     @PostMapping
+    @Operation(summary = "Ajouter un nouvel utilisateur")
     public ResponseEntity<UtilisateurDto> create(@Valid @RequestBody UtilisateurDto dto) {
         var utilisateur = utilisateurMapper.toEntity(dto);
         var saved = utilisateurService.ajouterUtilisateur(utilisateur);
@@ -56,7 +63,8 @@ public class UtilisateurRestController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UtilisateurDto> update(@PathVariable Long id, @Valid @RequestBody UtilisateurDto dto) {
+    @Operation(summary = "Modifier un utilisateur")
+    public ResponseEntity<UtilisateurDto> update(@Parameter(description = "id de l'utilisateur") @PathVariable Long id, @Valid @RequestBody UtilisateurDto dto) {
         var updated = utilisateurMapper.toEntity(dto);
         return utilisateurService.modifierUtilisateur(id, updated)
                 .map(utilisateurMapper::toDto)
@@ -65,7 +73,8 @@ public class UtilisateurRestController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    @Operation(summary = "Supprimer un utilisateur")
+    public ResponseEntity<Void> delete(@Parameter(description = "id de l'utilisateur") @PathVariable Long id) {
         return utilisateurService.supprimerUtilisateur(id)
                 ? ResponseEntity.noContent().build()
                 : ResponseEntity.notFound().build();
