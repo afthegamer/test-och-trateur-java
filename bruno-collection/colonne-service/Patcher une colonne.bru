@@ -1,0 +1,17 @@
+meta {
+  name: Patcher une colonne
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{colonne_url}}/api/colonnes/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "position": 3
+  }
+}

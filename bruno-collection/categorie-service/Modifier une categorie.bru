@@ -1,0 +1,18 @@
+meta {
+  name: Modifier une catégorie
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{categorie_url}}/api/categories/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nom": "A",
+    "rang": 2
+  }
+}

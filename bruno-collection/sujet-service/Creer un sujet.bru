@@ -1,0 +1,18 @@
+meta {
+  name: Créer un sujet
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{sujet_url}}/api/sujets
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nom": "Meilleurs jeux vidéo",
+    "description": "Classement des meilleurs jeux vidéo de tous les temps"
+  }
+}

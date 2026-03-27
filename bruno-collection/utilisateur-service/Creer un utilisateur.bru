@@ -1,0 +1,22 @@
+meta {
+  name: Créer un utilisateur
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{utilisateur_url}}/api/utilisateurs
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "prenom": "Jean",
+    "nom": "Dupont",
+    "email": "jean.dupont@skolae.fr",
+    "password": "motdepasse123",
+    "dateDeNaissance": "2000-01-15",
+    "themeId": 1
+  }
+}

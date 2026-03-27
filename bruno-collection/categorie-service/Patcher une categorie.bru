@@ -1,0 +1,17 @@
+meta {
+  name: Patcher une catégorie
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{categorie_url}}/api/categories/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "rang": 2
+  }
+}

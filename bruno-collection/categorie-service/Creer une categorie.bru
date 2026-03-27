@@ -1,0 +1,18 @@
+meta {
+  name: Créer une catégorie
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{categorie_url}}/api/categories
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nom": "S",
+    "rang": 1
+  }
+}

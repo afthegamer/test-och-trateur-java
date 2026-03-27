@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "name": "Microservices Tier-Liste",
+  "type": "collection",
+  "ignore": ["node_modules", ".git"]
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Créer une colonne
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{colonne_url}}/api/colonnes
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nom": "Tier S",
+    "position": 1
+  }
+}

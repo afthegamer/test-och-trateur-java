@@ -1,0 +1,22 @@
+meta {
+  name: Modifier un utilisateur
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{utilisateur_url}}/api/utilisateurs/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "prenom": "Jean-Pierre",
+    "nom": "Dupont",
+    "email": "jean.dupont@skolae.fr",
+    "password": "nouveaumotdepasse",
+    "dateDeNaissance": "2000-01-15",
+    "themeId": 1
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Modifier un sujet
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{sujet_url}}/api/sujets/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nom": "Meilleurs films",
+    "description": "Classement des meilleurs films de tous les temps"
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Modifier une colonne
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{colonne_url}}/api/colonnes/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nom": "Tier A",
+    "position": 2
+  }
+}
